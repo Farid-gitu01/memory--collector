@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f5ef">
+  <meta name="description" content="A private, personal place to collect and revisit your family's most precious moments.">
+  <title>Memory Collection — made for your moments</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Memory Collection home">
+        <span class="brand-mark" aria-hidden="true">♡</span>
+        <span>Memory <em>Collection</em></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#top">Home</a>
+        <a href="#memories">Our Memories</a>
+        <a href="#upload">Upload Memory</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="Family sharing a happy moment outdoors"></div>
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <p class="eyebrow hero-eyebrow"><span></span> The little things become the big things</p>
+        <h1 id="hero-title">Every moment deserves<br>to be <em>remembered.</em></h1>
+        <p class="hero-copy">A special place to collect, preserve, and revisit your family's most precious memories.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#memories">Explore memories <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="#upload">Upload your memory <span aria-hidden="true">＋</span></a>
+        </div>
+        <div class="hero-note"><span class="note-avatars" aria-hidden="true"><i>♡</i><i>✦</i><i>⌂</i></span><span>Made for the moments that make a family</span></div>
+      </div>
+      <a class="scroll-cue" href="#memories" aria-label="Scroll to memories"><span></span></a>
+    </section>
+
+    <section class="memories-section section-pad" id="memories" aria-labelledby="memories-title">
+      <div class="container">
+        <div class="section-heading heading-row">
+          <div>
+            <p class="eyebrow"><span></span> A lifetime, in little moments</p>
+            <h2 id="memories-title">Our <em>memories</em></h2>
+          </div>
+          <p class="section-intro">From candlelit birthdays to spontaneous Sundays, every memory has a place here.</p>
+        </div>
+        <div class="gallery-toolbar">
+          <div class="filter-list" role="group" aria-label="Filter memories by category">
+            <button class="filter-chip is-active" type="button" data-category="all" aria-pressed="true">All moments</button>
+            <button class="filter-chip" type="button" data-category="Birthdays" aria-pressed="false">Birthdays</button>
+            <button class="filter-chip" type="button" data-category="Weddings" aria-pressed="false">Weddings</button>
+            <button class="filter-chip" type="button" data-category="Family Trips" aria-pressed="false">Family trips</button>
+            <button class="filter-chip" type="button" data-category="Festivals" aria-pressed="false">Festivals</button>
+            <button class="filter-chip" type="button" data-category="Anniversaries" aria-pressed="false">Anniversaries</button>
+            <button class="filter-chip" type="button" data-category="Special Moments" aria-pressed="false">Special moments</button>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Search memories by event title</span>
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="memory-search" type="search" placeholder="Search memories…" autocomplete="off">
+          </label>
+        </div>
+        <div class="memory-grid" id="memory-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">♡</span>
+          <h3>No moments found just yet</h3>
+          <p>Try another search or add a memory to start your collection.</p>
+          <a class="text-link" href="#upload">Add your first memory <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="storage-note"><span aria-hidden="true">ⓘ</span> Your uploaded memories are saved only in this browser on this device. They are not cloud-backed or shared with other family members.</p>
+      </div>
+    </section>
+
+    <section class="upload-section section-pad" id="upload" aria-labelledby="upload-title">
+      <div class="container upload-layout">
+        <div class="upload-copy">
+          <p class="eyebrow"><span></span> Keep it close</p>
+          <h2 id="upload-title">Add a moment<br>to your <em>story.</em></h2>
+          <p>Every family has a thousand stories. Start with one you never want to forget.</p>
+          <div class="upload-perks">
+            <div><span class="perk-icon">⌂</span><p><strong>Yours to keep</strong><br>Memories stay in this browser.</p></div>
+            <div><span class="perk-icon">✧</span><p><strong>Photos &amp; videos</strong><br>Bring your moments to life.</p></div>
+          </div>
+        </div>
+        <form class="upload-form" id="upload-form">
+          <div class="form-heading"><span class="form-step">A new memory</span><span class="form-flower" aria-hidden="true">✿</span></div>
+          <div class="form-grid">
+            <label class="field field-wide">Event title <span class="required-mark">*</span>
+              <input name="title" type="text" placeholder="e.g. Maya's 7th birthday" maxlength="80" required>
+            </label>
+            <label class="field">Category <span class="required-mark">*</span>
+              <select name="category" required>
+                <option value="" disabled selected>Choose a category</option>
+                <option>Birthdays</option><option>Weddings</option><option>Family Trips</option>
+                <option>Festivals</option><option>Anniversaries</option><option>Special Moments</option>
+              </select>
+            </label>
+            <label class="field">Event date <span class="required-mark">*</span>
+              <input name="date" type="date" required>
+            </label>
+            <label class="field field-wide">A little about this moment
+              <textarea name="description" rows="3" maxlength="240" placeholder="What made this day special?"></textarea>
+            </label>
+            <div class="field field-wide">
+              <span class="field-label">Photos &amp; videos</span>
+              <label class="drop-zone" for="memory-files">
+                <span class="upload-symbol" aria-hidden="true">↑</span>
+                <span><strong>Choose files</strong> or drop them here</span>
+                <small>JPG, PNG, GIF, WEBP, MP4, MOV · up to 25 MB each</small>
+                <input id="memory-files" name="media" type="file" accept="image/*,video/mp4,video/webm,video/quicktime" multiple>
+              </label>
+              <div id="media-preview" class="media-preview" aria-live="polite"></div>
+            </div>
+          </div>
+          <button class="button button-dark submit-memory" type="submit">Save this memory <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="upload-message" role="status" aria-live="polite"></p>
+          <p class="form-disclaimer">Stored locally with IndexedDB. This is browser-specific storage, not cloud storage.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div class="about-image-wrap">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Family enjoying time together in a sunlit garden" loading="lazy">
+          <div class="image-caption"><span>the best days</span><strong>are the ones we share</strong></div>
+          <span class="about-stamp" aria-hidden="true">♡</span>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow"><span></span> A home for your family's story</p>
+          <h2 id="about-title">Preserving moments,<br><em>connecting generations.</em></h2>
+          <p>Some memories live in old photo albums. Others are tucked away on a phone. Memory Collection brings those little pieces of your family's story together in one warm, organized place.</p>
+          <p>Save the milestones, the traditions, and the ordinary afternoons worth remembering. Come back anytime, relive the feeling, and share the stories behind every picture with the people you love.</p>
+          <a class="text-link" href="#upload">Start your collection <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow"><span></span> We'd love to hear from you</p>
+          <h2 id="contact-title">A note from <em>you.</em></h2>
+          <p>Questions, kind words, or a story to share? Leave us a note.</p>
+          <div class="contact-decoration" aria-hidden="true">♡</div>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <label class="field">Your name <span class="required-mark">*</span>
+            <input name="name" type="text" placeholder="How should we call you?" maxlength="80" required>
+          </label>
+          <label class="field">Email address <span class="required-mark">*</span>
+            <input name="email" type="email" placeholder="you@example.com" maxlength="120" required>
+          </label>
+          <label class="field">Your message <span class="required-mark">*</span>
+            <textarea name="message" rows="4" maxlength="1000" placeholder="Write your note here…" required></textarea>
+          </label>
+          <button class="button button-dark" type="submit">Send your note <span aria-hidden="true">→</span></button>
+          <p class="form-message" id="contact-message" role="status" aria-live="polite"></p>
+          <p class="form-disclaimer">This demo doesn't send messages to a server. Your note will not be transmitted.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand-block">
+        <a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true">♡</span><span>Memory <em>Collection</em></span></a>
+        <p>A little place for all the moments<br>that make a family.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-label">Find your way</span>
+        <a href="#top">Home</a><a href="#memories">Our memories</a><a href="#upload">Add a memory</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer-signoff"><span class="footer-heart" aria-hidden="true">♡</span><p>Made with love for<br>every family memory.</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="copyright-year"></span> Memory Collection</span><span>Memories are made to be kept.</span></div>
+  </footer>
+
+  <dialog class="lightbox" id="memory-dialog" aria-labelledby="lightbox-title">
+    <button class="lightbox-close" type="button" aria-label="Close memory viewer">×</button>
+    <div class="lightbox-media" id="lightbox-media"></div>
+    <div class="lightbox-caption"><div><span class="memory-category" id="lightbox-category"></span><h2 id="lightbox-title"></h2><p id="lightbox-description"></p><time id="lightbox-date"></time></div><div class="lightbox-controls"><button id="lightbox-prev" type="button" aria-label="Previous photo">←</button><span id="lightbox-count"></span><button id="lightbox-next" type="button" aria-label="Next photo">→</button></div></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
